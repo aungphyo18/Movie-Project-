@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width:0.5rem;
+    background-color:var(--bg-color);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 5rem;
+}
+:root{
+    --main-color:#e92851;
+    --text-color:#fff;
+    --bg-color:#020307;
+}
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+}
+/* navbar */
+header{
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    display:flex;
+    justify-content: space-between;
+    padding:20px 40px;
+    background-color: var(--bg-color);
+    box-shadow: -2px 9px 16px -6px rgba(186,51,51,0.75);
+-webkit-box-shadow: -2px 9px 16px -6px rgba(186,51,51,0.75);
+-moz-box-shadow: -2px 9px 16px -6px rgba(186,51,51,0.75);
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--text-color);
+    display:flex;
+    align-items: center;
+}
+.logo i{
+    margin-right: 5px;
+}  
+.navbar-list{
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+   
+}
+.navbar-list a{
+    font-weight: 500;
+    font-size: 18px;
+    color:var(--text-color)
+}
+.navbar-list a:hover{
+    color:#f27d07;
+    border-bottom: 3px solid #f27d07;
+}
+.active{
+    border-bottom: 3px solid #f27d07;
+    color:#f27d07;
+}
+.btn{
+    background-color:var(--main-color);
+    color:var(--text-color);
+    padding:0.7rem 1.4rem;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: #f0e6e6;
+    color:black;
+}
+/* navabr */
+/* cover */
+.container{
+    display: flex;
+    align-items: center;
+    margin-top: 110px;
+    width:100%;
+    height: 540px;
+    position: relative;
+  
+}
+.container img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+}
+.text{
+    padding-left: 130px;
+}
+.text-sec{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 4rem;
+}
+.text-one{
+    font-size: 30px;
+    font-weight: 600;
+}
+.text-thr{ 
+    font-size: 1.5rem;
+     display: flex;
+    /* align-items: center; */
+    text-align: center;
+    background-color: var(--main-color);
+    max-width: max-content;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.text-thr:hover{
+    transform: scale(1.2);
+}
+/* cover end */
+/* movie section */
+.movie{
+    margin-top: 10px;
+}
+.heading{
+   max-width:968px;
+   margin:0 auto;
+   font-size: 1.5em;
+   font-weight: 600;
+   text-transform: uppercase;
+   border-bottom: 2px solid var(--main-color);
+}
+.movie-container{
+    max-width: 960px;
+    margin:20px auto 0 auto ;
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:1rem
+}
+.box .box-image img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box .box-image{
+    max-width: 100%;
+    height: 270px;
+    transition: 0.5s;
+    opacity: 0.8;
+
+}
+.lee img{
+    width:100%;
+    height: 270px;
+    transition: 0.2s;
+    opacity: 0.8;
+}
+.movie-container h3{
+    margin: 8px 0 5px 0;
+}
+.box-image:hover{
+    transform:translateY(-10px);
+    filter: brightness(1.5)
+}
+.lee img:hover{
+    transform:translateY(-10px);
+    filter: brightness(1.5);
+}
+.movie-two{
+    margin-top: 60px;
+}
+/* movie section end */
+/* message */
+.content{
+    max-width: 968px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form input{
+    width: 600px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;;
+}
+.two{
+    padding: 5px 30px;
+    margin-top: 20px;
+}
+/* message end */
+.footer{
+    max-width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color:#f54242;
+}
+.social{
+    display: flex;
+    align-items: center;
+}
+.three{
+    margin-right: 20px;
+    background-color: var(--bg-color);
+}
+.social .logo{
+    font-size: 30px;
+}
+.social .logo:hover{
+    transform:translateY(-10px);
+}
+.social-two{
+    display: flex;
+}
+
+/* media */
+@media (max-width:1080px){
+    .change{
+        font-size: 30px;
+      
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: -100px;
+    }
+    .text-thr{
+        font-size: 1.2rem;
+    }
+    .text-one{
+        font-size: 1.5rem;
+    }
+    .text-sec{
+        font-size: 2.5rem;
+    }
+    .movie{
+        margin-top: -40px;
+    }
+    .container{
+        margin-top: -1px;
+    }
+}
+@media (max-width:650px){
+    .navbar-list{
+        display: none;
+    }
+    .change{
+        font-size: 18px;
+    }
+   .text-thr{
+      font-size: 0.9rem;
+   }
+   .text-sec{
+      font-size: 1.5rem;
+   }
+   .text-one{
+      font-size: 0.9rem;
+   }
+   .container{
+    margin-top: -40px;
+   }
+   .movie{
+    
+    width: 500px;
+    margin:-100px auto 0 auto;
+   }
+   .movie-two{
+     width: 500px;
+     margin: 40px auto 0 auto;
+   }
+   .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+   }
+   .social{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+   }
+   .social-two{
+    display: flex;
+    
+   }
+   .fo{
+    font-size: 1.2rem;
+   }
+   .three{
+    font-size: 1rem;
+    padding: 5px 7px;
+    margin-right: 5px;
+   }
+}
+@media (max-width:430px){
+   .logo{
+     font-size: .9rem;
+   }
+   .real{
+    font-size: .9rem;
+    padding: 5px 7px;
+   }
+   .container img{
+    width: 100%;
+    height: 250px;
+   }
+   .text-one{
+    font-size: 15px;
+   }
+   .movie{
+    width:200px;
+    margin-top: -100px;
+   }
+   .movie h2{
+    font-size: 15px;
+   }
+  .text-thr{
+    font-size: .9rem;
+    padding: 5px 7px;
+  }
+  .movie-two{
+    width: 200px;
+  }
+.coming{
+    font-size: 15px;
+}
+.content h2{
+    font-size: .9rem;
+}
+.content .form .request{
+  width: 200px;
+  margin: 0 auto;
+}
+.fo{
+   font-size: .9rem;
+}
+.three{
+    font-size: .8rem;
+    margin-top: -px;
+}
+.social-two .logo{
+    font-size: 1.2rem;
+}
+.footer{
+    height: 70px;
+}
+}
+
